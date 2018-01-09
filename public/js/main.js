@@ -63,6 +63,7 @@ socket.on('userLeft', function(data) {
         entername.classList.add('hidden');
         messagebox.classList.add('hidden');
         indexPage.classList.remove('hidden');
+        document.getElementById('message-container').innerHTML = '';
         socket.emit('usersLeaveRoom', {user: user});
       }, 3000)
   }
